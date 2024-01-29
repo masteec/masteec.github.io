@@ -1,0 +1,890 @@
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+#SlideShow1
+{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 0;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+@keyframes SlideShow1-animation
+{
+   0% { opacity: 0; animation-timing-function: ease-in; }
+   5% { opacity: 1; animation-timing-function: ease-out; }
+   14% { opacity: 1; }
+   19% { opacity: 0; }
+   100% { opacity: 0; }
+}
+#SlideShow1 li span
+{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-size: cover;
+   background-position: 50% 50%;
+   background-repeat: no-repeat;
+   opacity: 0;
+   z-index: 0;
+   animation: SlideShow1-animation 35000ms linear infinite 0s;
+}
+#SlideShow1 li:nth-child(1) span
+{
+   background-image: url('images/PXL_20240113_161650668.jpg');
+   animation-delay: 0ms;
+}
+#SlideShow1 li:nth-child(2) span
+{
+   background-image: url('images/PXL_20240113_161747551.jpg');
+   animation-delay: 5000ms;
+}
+#SlideShow1 li:nth-child(3) span
+{
+   background-image: url('images/PXL_20240113_161759543.jpg');
+   animation-delay: 10000ms;
+}
+#SlideShow1 li:nth-child(4) span
+{
+   background-image: url('images/PXL_20240113_161945858.jpg');
+   animation-delay: 15000ms;
+}
+#SlideShow1 li:nth-child(5) span
+{
+   background-image: url('images/PXL_20240113_162551171.jpg');
+   animation-delay: 20000ms;
+}
+#SlideShow1 li:nth-child(6) span
+{
+   background-image: url('images/PXL_20240113_162557909.jpg');
+   animation-delay: 25000ms;
+}
+#SlideShow1 li:nth-child(7) span
+{
+   background-image: url('images/PXL_20240113_162603192.jpg');
+   animation-delay: 30000ms;
+}
+#SlideShow1
+{
+}
+#wb_Image1
+{
+   height: 100%;
+   margin: 0;
+   vertical-align: top;
+}
+#Image1
+{
+   border: 0px solid #000000;
+   border-radius: 0px;
+   padding: 80px 0 0 0;
+   display: inline-block;
+   width: 100%;
+   height: 100%;
+   vertical-align: top;
+   object-fit: scale-down;
+}
+#wb_LayoutGrid1
+{
+   clear: both;
+   position: -webkit-sticky;
+   position: sticky;
+   top: 0;
+   z-index: 7776;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   border-radius: 0px;
+   box-sizing: border-box;
+   margin: 0;
+}
+#LayoutGrid1
+{
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 0;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutGrid1 > .col-1
+{
+   box-sizing: border-box;
+   font-size: 0;
+   min-height: 1px;
+   padding-right: 15px;
+   padding-left: 15px;
+   position: relative;
+}
+#LayoutGrid1 > .col-1
+{
+   flex: 0 0 auto;
+}
+#LayoutGrid1 > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 100%;
+   max-width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid1 > .col-1
+{
+   flex-basis: 100% !important;
+   max-width: 100% !important;
+}
+}
+#wb_LayoutGrid2
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   border-radius: 0px;
+   box-sizing: border-box;
+   margin: 20px 0 0 0 ;
+}
+#LayoutGrid2
+{
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 80px 0 0 0;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutGrid2 > .col-1, #LayoutGrid2 > .col-2, #LayoutGrid2 > .col-3, #LayoutGrid2 > .col-4
+{
+   box-sizing: border-box;
+   font-size: 0;
+   min-height: 1px;
+   padding-right: 0px;
+   padding-left: 0px;
+   position: relative;
+}
+#LayoutGrid2 > .col-1, #LayoutGrid2 > .col-2, #LayoutGrid2 > .col-3, #LayoutGrid2 > .col-4
+{
+   flex: 0 0 auto;
+}
+#LayoutGrid2 > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 25%;
+   max-width: 25%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+#LayoutGrid2 > .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 41.66666667%;
+   max-width: 41.66666667%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: flex-end;
+   text-align: right;
+}
+#LayoutGrid2 > .col-3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 8.33333333%;
+   max-width: 8.33333333%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: flex-start;
+   text-align: left;
+}
+#LayoutGrid2 > .col-4
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 25%;
+   max-width: 25%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: flex-start;
+   align-self: stretch;
+   align-items: flex-start;
+   justify-content: flex-start;
+   text-align: left;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid2 > .col-1, #LayoutGrid2 > .col-2, #LayoutGrid2 > .col-3, #LayoutGrid2 > .col-4
+{
+   flex-basis: 100% !important;
+   max-width: 100% !important;
+}
+}
+#ThemeableButton1
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+   font-style: normal;
+   display: inline-block;
+   position: relative;
+   vertical-align: middle;
+   user-select: none;
+   overflow: visible;
+   text-decoration: none;
+   cursor: pointer;
+}
+#wb_ThemeableButton1
+{
+   border-radius: 12px;
+   margin: 0;
+   vertical-align: top;
+}
+#ThemeableButton1
+{
+   box-sizing: border-box;
+   padding: 0;
+   text-align: center;
+}
+#wb_ThemeableButton1 .ui-button
+{
+   display: flex;
+   align-items: center;
+   margin: 0;
+   justify-content: center;
+}
+#ThemeableButton1
+{
+   color: inherit;
+}
+#wb_ThemeableButton1 .ui-corner-all, #wb_ThemeableButton1 .ui-corner-left
+{
+   border-bottom-left-radius: 12px;
+   border-top-left-radius: 12px;
+}
+#wb_ThemeableButton1 .ui-corner-all, #wb_ThemeableButton1 .ui-corner-right
+{
+   border-bottom-right-radius: 12px;
+   border-top-right-radius: 12px;
+}
+#wb_ThemeableButton1 .ui-button
+{
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 1px solid #1A1A1A;
+   color: #000000;
+}
+#wb_ThemeableButton1 .ui-state-hover, #wb_ThemeableButton1 .ui-button:hover
+{
+   border-color: #161616;
+   background-color: #161616;
+   background-image: none;
+   color: #FFFFFF;
+}
+#wb_ThemeableButton1 .ui-state-active, #wb_ThemeableButton1 .ui-button:active
+{
+   border-color: #151515;
+   background-color: #151515;
+   background-image: none;
+   color: #FFFFFF;
+}
+#wb_FlipSwitch1
+{
+   position: relative;
+   margin: 0;
+}
+#FlipSwitch1
+{
+   display: none;
+}
+#FlipSwitch1-label
+{
+   display: block;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid #DEE2E6;
+   border-radius: 16px;
+   box-sizing: border-box;
+   max-width: 100%;
+   height: 100%;
+   transition: border-color 300ms ease-in 0s;
+}
+#FlipSwitch1-inner
+{
+   box-sizing: border-box;
+   display: block;
+   width: 200%;
+   margin-left: -100%;
+   transition: margin 300ms ease-in 0s;
+}
+#FlipSwitch1-inner:before, #FlipSwitch1-inner:after
+{
+   display: block;
+   float: left;
+   width: 50%;
+   height: 16px;
+   padding: 0;
+   line-height: 16px;
+   color: #212529;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   box-sizing: border-box;
+   border-radius: 16px;
+   text-align: center;
+}
+#FlipSwitch1-inner:before
+{
+   content: "Sí";
+   padding-right: 16px;
+   background-color: #FFFFFF;
+   color: #000000;
+   border-radius: 16px 0 0 16px;
+}
+#FlipSwitch1-inner:after
+{
+   content: "No";
+   padding-left: 16px;
+   background-color: #FFFFFF;
+   color: #212529;
+   border-radius: 0 16px 16px 0;
+}
+#FlipSwitch1-switch
+{
+   display: block;
+   width: 16px;
+   margin: 0;
+   background: #696969;
+   border: 2px solid #4F4F4F;
+   border-radius: 16px;
+   box-shadow: 0px 0px 5px rgba(0,0,0,0.30);
+   position: absolute;
+   top: 2px;
+   bottom: 2px;
+   right: 30px;
+   transition: all 300ms ease-in 0s;
+   box-sizing: border-box;
+}
+#FlipSwitch1:checked + #FlipSwitch1-label
+{
+   border-color: #000000;
+}
+#FlipSwitch1:checked + #FlipSwitch1-label #FlipSwitch1-inner
+{
+   margin-left: 0;
+}
+#FlipSwitch1:checked + #FlipSwitch1-label #FlipSwitch1-switch
+{
+   right: 2px;
+   background: #000000;
+   border-color: #000000;
+}
+#wb_LayoutGrid3
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   border-radius: 0px;
+   box-sizing: border-box;
+   margin: 20px 0 0 0 ;
+}
+#LayoutGrid3
+{
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 80px 0 0 0;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutGrid3 > .col-1, #LayoutGrid3 > .col-2, #LayoutGrid3 > .col-3, #LayoutGrid3 > .col-4
+{
+   box-sizing: border-box;
+   font-size: 0;
+   min-height: 1px;
+   padding-right: 0px;
+   padding-left: 0px;
+   position: relative;
+}
+#LayoutGrid3 > .col-1, #LayoutGrid3 > .col-2, #LayoutGrid3 > .col-3, #LayoutGrid3 > .col-4
+{
+   flex: 0 0 auto;
+}
+#LayoutGrid3 > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 25%;
+   max-width: 25%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: flex-end;
+   text-align: right;
+}
+#LayoutGrid3 > .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 41.66666667%;
+   max-width: 41.66666667%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: flex-end;
+   text-align: right;
+}
+#LayoutGrid3 > .col-3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 8.33333333%;
+   max-width: 8.33333333%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: flex-start;
+   text-align: left;
+}
+#LayoutGrid3 > .col-4
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 25%;
+   max-width: 25%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: flex-start;
+   align-self: stretch;
+   align-items: flex-start;
+   justify-content: flex-start;
+   text-align: left;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid3 > .col-1, #LayoutGrid3 > .col-2, #LayoutGrid3 > .col-3, #LayoutGrid3 > .col-4
+{
+   flex-basis: 100% !important;
+   max-width: 100% !important;
+}
+}
+#ThemeableButton2
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+   font-style: normal;
+   display: inline-block;
+   position: relative;
+   vertical-align: middle;
+   user-select: none;
+   overflow: visible;
+   text-decoration: none;
+   cursor: pointer;
+}
+#wb_ThemeableButton2
+{
+   border-radius: 12px;
+   margin: 0;
+   vertical-align: top;
+}
+#ThemeableButton2
+{
+   box-sizing: border-box;
+   padding: 0;
+   text-align: center;
+}
+#wb_ThemeableButton2 .ui-button
+{
+   display: flex;
+   align-items: center;
+   margin: 0;
+   justify-content: center;
+}
+#ThemeableButton2
+{
+   color: inherit;
+}
+#wb_ThemeableButton2 .ui-corner-all, #wb_ThemeableButton2 .ui-corner-left
+{
+   border-bottom-left-radius: 12px;
+   border-top-left-radius: 12px;
+}
+#wb_ThemeableButton2 .ui-corner-all, #wb_ThemeableButton2 .ui-corner-right
+{
+   border-bottom-right-radius: 12px;
+   border-top-right-radius: 12px;
+}
+#wb_ThemeableButton2 .ui-button
+{
+   background-color: #FFFFFF;
+   background-image: none;
+   border: 1px solid #1A1A1A;
+   color: #000000;
+}
+#wb_ThemeableButton2 .ui-state-hover, #wb_ThemeableButton2 .ui-button:hover
+{
+   border-color: #161616;
+   background-color: #161616;
+   background-image: none;
+   color: #FFFFFF;
+}
+#wb_ThemeableButton2 .ui-state-active, #wb_ThemeableButton2 .ui-button:active
+{
+   border-color: #151515;
+   background-color: #151515;
+   background-image: none;
+   color: #FFFFFF;
+}
+#wb_LayoutGrid4
+{
+   clear: both;
+   position: relative;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   border-radius: 0px;
+   box-sizing: border-box;
+   margin: 0;
+}
+#LayoutGrid4
+{
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 0;
+   margin-right: auto;
+   margin-left: auto;
+}
+#LayoutGrid4 > .col-1, #LayoutGrid4 > .col-2, #LayoutGrid4 > .col-3, #LayoutGrid4 > .col-4
+{
+   box-sizing: border-box;
+   font-size: 0;
+   min-height: 1px;
+   padding-right: 7px;
+   padding-left: 7px;
+   position: relative;
+}
+#LayoutGrid4 > .col-1, #LayoutGrid4 > .col-2, #LayoutGrid4 > .col-3, #LayoutGrid4 > .col-4
+{
+   flex: 0 0 auto;
+}
+#LayoutGrid4 > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 16.66666667%;
+   max-width: 16.66666667%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: flex-end;
+   text-align: right;
+}
+#LayoutGrid4 > .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 41.66666667%;
+   max-width: 41.66666667%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: flex-end;
+   text-align: right;
+}
+#LayoutGrid4 > .col-2 > .col-2-padding
+{
+   box-sizing: border-box;
+   width: 100%;
+   padding: 0 45px 0 0;
+}
+#LayoutGrid4 > .col-3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 16.66666667%;
+   max-width: 16.66666667%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+   align-self: stretch;
+   align-items: center;
+   justify-content: flex-start;
+   text-align: left;
+}
+#LayoutGrid4 > .col-4
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   border-radius: 0px;
+   flex-basis: 25%;
+   max-width: 25%;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: flex-start;
+   align-self: stretch;
+   align-items: flex-start;
+   justify-content: flex-start;
+   text-align: left;
+}
+@media (max-width: 480px)
+{
+#LayoutGrid4 > .col-1, #LayoutGrid4 > .col-2, #LayoutGrid4 > .col-3, #LayoutGrid4 > .col-4
+{
+   flex-basis: 100% !important;
+   max-width: 100% !important;
+}
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #000000;
+   border-radius: 0px;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text1
+{
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: 400;
+   font-size: 13px;
+   line-height: 20px;
+}
+#wb_Text1 p, #wb_Text1 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#wb_Text1
+{
+   display: block;
+   margin: 0;
+   box-sizing: border-box;
+   width: 100%;
+}
+#wb_Picture1
+{
+   height: 100%;
+   margin: 0;
+   vertical-align: top;
+}
+#Picture1
+{
+   border: 0px solid #000000;
+   border-radius: 0px;
+   box-sizing: border-box;
+   padding: 0;
+   object-fit: scale-down;
+   display: inline-block;
+   width: 100%;
+   height: 100%;
+   vertical-align: top;
+}
+#wb_Picture2
+{
+   height: 100%;
+   margin: 0;
+   vertical-align: top;
+}
+#Picture2
+{
+   border: 0px solid #000000;
+   border-radius: 0px;
+   box-sizing: border-box;
+   padding: 0;
+   object-fit: scale-down;
+   display: inline-block;
+   width: 100%;
+   height: 100%;
+   vertical-align: top;
+}
+#wb_ThemeableButton1
+{
+   display: inline-block;
+   width: 346px;
+   height: 32px;
+   z-index: 0;
+}
+#wb_Picture2
+{
+   display: block;
+   width: 100%;
+   height: 40px;
+   z-index: 3;
+}
+#wb_Image1
+{
+   display: inline-block;
+   width: 940px;
+   height: 252px;
+   z-index: 4;
+}
+#wb_Picture1
+{
+   display: block;
+   width: 100%;
+   height: 38px;
+   z-index: 1;
+}
+#wb_FlipSwitch1
+{
+   display: inline-block;
+   width: 48px;
+   height: 20px;
+   z-index: 12;
+}
+#ThemeableButton2
+{
+   width: 100%;
+   height: 100%;
+}
+#ThemeableButton1
+{
+   width: 100%;
+   height: 100%;
+}
+#wb_ThemeableButton2
+{
+   display: inline-block;
+   width: 346px;
+   height: 32px;
+   z-index: 2;
+}
+@media only screen and (max-width: 969px)
+{
+body
+{
+   background-color: #FFFFFF;
+   background-image: none;
+}
+#SlideShow1
+{
+   visibility: visible;
+   display: inline-block;
+}
+#wb_Image1
+{
+   width: 450px;
+   height: 252px;
+   visibility: visible;
+   display: inline-block;
+   margin: 0;
+   padding: 80px 0 0 0;
+}
+#Image1
+{
+   width: 450px;
+   height: 252px;
+}
+#wb_LayoutGrid1
+{
+   visibility: visible;
+   display: table;
+}
+#wb_LayoutGrid1
+{
+   height: auto;
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+#LayoutGrid1
+{
+   height: auto;
+   padding: 0;
+}
+}

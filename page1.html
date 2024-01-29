@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Virtual Alto | Recorrido virtual del Museo El Mogote</title>
+<meta name="generator" content="WYSIWYG Web Builder 19 - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="faviconpattern-02.png" rel="icon" sizes="268x268" type="image/png">
+<link href="Untitled1.css" rel="stylesheet">
+<link href="page1.css" rel="stylesheet">
+<script src="jquery-3.7.1.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wwb19.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#FlipSwitch1").change(function()
+   {
+      if ($('#FlipSwitch1').is(':checked'))
+      {
+         ShowObjectWithEffect('wb_LayoutGrid2', 0, 'fade', 1);
+         ShowObjectWithEffect('wb_LayoutGrid3', 1, 'fade', 1);
+      }
+      if (!$('#FlipSwitch1').is(':checked'))
+      {
+         ShowObjectWithEffect('wb_LayoutGrid3', 0, 'fade', 1);
+         ShowObjectWithEffect('wb_LayoutGrid2', 1, 'fade', 1);
+      }
+   });
+   $("#FlipSwitch1").trigger('change');
+});
+</script>
+</head>
+<body>
+<ul id="SlideShow1" class="style2">
+<li><span></span></li>
+<li><span></span></li>
+<li><span></span></li>
+<li><span></span></li>
+<li><span></span></li>
+<li><span></span></li>
+<li><span></span></li>
+</ul>
+
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="col-1">
+<div id="wb_Image1">
+<img src="images/logovirtualalto-02white.png" id="Image1" alt="" width="940" height="502">
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_ThemeableButton1">
+<a class="ui-button ui-corner-all" id="ThemeableButton1" href="">Iniciar</a>
+</div>
+</div>
+<div class="col-3">
+<picture id="wb_Picture1">
+<img src="images/Imagen2.png" id="Picture1" alt="" width="42" height="42">
+</picture>
+</div>
+<div class="col-4">
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_ThemeableButton2">
+<a class="ui-button ui-corner-all" id="ThemeableButton2" href="">Iniciar (con audiodescripciones)</a>
+</div>
+</div>
+<div class="col-3">
+<picture id="wb_Picture2">
+<img src="images/Imagen3.png" id="Picture2" alt="" width="44" height="44">
+</picture>
+</div>
+<div class="col-4">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_Text1">
+<p>Audio-descripciones</p>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_FlipSwitch1">
+<input type="checkbox" role="switch" name="" id="FlipSwitch1" value="Audioguías">
+<label id="FlipSwitch1-label" for="FlipSwitch1">
+<span id="FlipSwitch1-inner"></span>
+<span id="FlipSwitch1-switch"></span>
+</label>
+</div>
+</div>
+<div class="col-4">
+</div>
+</div>
+</div>
+</body>
+</html>

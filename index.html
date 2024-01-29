@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Virtual Alto | Recorrido virtual del Museo El Mogote</title>
+<meta name="generator" content="WYSIWYG Web Builder 19 - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="faviconpattern-02.png" rel="icon" sizes="268x268" type="image/png">
+<link href="Untitled1.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-3.7.1.min.js"></script>
+<script src="wwb19.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#vr').addClass('visibility-hidden');
+   $('#RollOver2').addClass('visibility-hidden');
+   $('#wb_Image1').addClass('visibility-hidden');
+   function onScrollvr()
+   {
+      var $obj = $("#vr");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('vr', 'animate-fade-in', 15, 2000);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('vr', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#vr').inViewPort(true))
+   {
+      $('#vr').addClass("in-viewport");
+   }
+   onScrollvr();
+   $(window).scroll(function(event)
+   {
+      onScrollvr();
+   });
+   function onScrollRollOver2()
+   {
+      var $obj = $("#RollOver2");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('RollOver2', 'animate-fade-in', 15, 2000);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('RollOver2', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#RollOver2').inViewPort(true))
+   {
+      $('#RollOver2').addClass("in-viewport");
+   }
+   onScrollRollOver2();
+   $(window).scroll(function(event)
+   {
+      onScrollRollOver2();
+   });
+   function onScrollImage1()
+   {
+      var $obj = $("#wb_Image1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_Image1', 'transform-scale-in', 0, 2000);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_Image1', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_Image1').inViewPort(true))
+   {
+      $('#wb_Image1').addClass("in-viewport");
+   }
+   onScrollImage1();
+   $(window).scroll(function(event)
+   {
+      onScrollImage1();
+   });
+});
+</script>
+</head>
+<body>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image1">
+<img src="images/logovirtualalto-02white.png" loading="lazy" id="Image1" alt="" width="501" height="268">
+</div>
+<div id="wb_Text1" class="style1">
+<p>¡Bienvenido/a!</p>
+<p>Por favor indica el dispositivo desde el que accederás</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+<div id="vr">
+<a href="./index.html#LayoutGrid4">
+<img class="hover" alt="" src="images/buttonh1.png" width="291" height="298">
+<span><img alt="" src="images/buttonh.png" width="291" height="298"></span>
+</a>
+</div>
+<div id="wb_Text2">
+<p>Headset de realidad virtual</p>
+</div>
+</div>
+<div class="col-2">
+<div id="RollOver2">
+<a href="./page1.html">
+<img class="hover" alt="" src="images/buttonj1.png" width="269" height="269">
+<span><img alt="" src="images/buttonj.png" width="269" height="269"></span>
+</a>
+</div>
+<div id="wb_Text3">
+<p>Celular/computadora</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="col-1">
+</div>
+<div class="col-2">
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4">
+<div class="row">
+<div class="col-1">
+<div id="wb_YouTube1">
+<iframe id="YouTube1" src="https://www.youtube.com/embed/6unys7cpYng?rel=0&amp;autoplay=1&amp;controls=0&amp;autohide=0"></iframe>
+
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div id="wb_ThemeableButton1">
+<a class="ui-button ui-corner-all" id="ThemeableButton1" href="./page1.html">Entendido, ¡vamos allá!</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
