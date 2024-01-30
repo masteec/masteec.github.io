@@ -1504,25 +1504,21 @@ $(document).ready(function(){ ChangePanorama('room1'); });
 						break;
 				}
                 window.addEventListener('devicemotion', function (event) {
-                    var accelerationX = event.accelerationIncludingGravity.x;
-                    if (accelerationX > 10) {
-                        // Mover hacia la derecha
+                    var gamma = event.gamma; // Inclinación lateral (izquierda/derecha)
+                    var beta = event.beta; // Inclinación hacia abajo
+
+                    if (gamma > 30) {
                         closeMedia();
-                    } else if (accelerationX < -10) {
-                        // Mover hacia la izquierda
+                    } else if (gamma < -30) {
                         closeMedia();
+                    }
+                     
+                    if (beta > 30) {
+                        $("#tmpcontent").scrollTop($("#tmpcontent").scrollTop() + 50); 
                     }
                 });
 
             
-                window.addEventListener('deviceorientation', function (event) {
-                    var beta = event.beta;
-                    if (beta > 60) {
-                        // Mover hacia abajo
-                        window.scrollTo(0, document.body.scrollHeight);
-                    }
-                });
-
             // Función para cerrar el contenido
                 function closeMedia() {
                     $("#tmp").fadeOut();
