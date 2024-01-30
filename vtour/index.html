@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<!--projecttitle--><title>VirtualAlto</title><!--projecttitle-end-->
+		<!--projecttitle--><title>Virtual Alto</title><!--projecttitle-end-->
 		<!--projectdescription--><meta name="description" content="Recorrido Virtual del Museo El Mogote"><!--projectdescription-end-->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
-		
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link href="/faviconpattern-02.png" rel="icon" sizes="268x268" type="image/png">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		
 		<!-- Insert this line above script imports  -->
@@ -96,7 +96,7 @@
 		<div id="tmp">
 			<div style="width: 100%; height: 100%; overflow: hidden; overflow-y: auto; box-sizing: border-box; position: relative;" id="tmpcontent"></div>
 			<div class="mediaclosebutton" onclick="hideTemp()"><i class="fa fa-times-circle"></i></div>
-		</div>
+		</div>
 
 		<div id="loading" class="fullwrapper" style="display: table; width: 100%; height: 100%;">
     		<div style="display: table-cell; vertical-align: middle; text-align: center; color: white; font-size: 30px; padding: 50px;">
@@ -109,13 +109,16 @@
 			
             var container = document.querySelector( '#container' );
 			/*panolens*/
-var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  output: 'console' , autoHideInfospot: false, } );
-/*panolens-end*/
+
+var viewer = new PANOLENS.Viewer( { container: container , controlBar: true,  output: 'console' , autoHideInfospot: false, } );
+
+/*panolens-end*/
 			
 			viewer.addUpdateCallback(function(){});
 			
 			/*panoramas*/
-var room1 = new PANOLENS.ImagePanorama( "panoramas/room1.jpg" );
+
+var room1 = new PANOLENS.ImagePanorama( "panoramas/room1.jpg" );
 			room1.addEventListener('progress', onProgress);
 			room1.addEventListener('load', function(e){
 				endLoading();
@@ -126,20 +129,30 @@
 			room1.addEventListener('click', function(e){
 			});
 
-var infospotroom10 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+var infospotroom10 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom10.position.set( 4977.60, -23.96, 409.55 );
 					room1.add(infospotroom10);
-infospotroom10.addEventListener('click', function(){
-ChangePanorama('room11hcm7K');
-});
-var infospotroom11 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
+
+infospotroom10.addEventListener('click', function(){
+
+ChangePanorama('room11hcm7K');
+
+});
+
+var infospotroom11 = new PANOLENS.Infospot( 512, hotspotIcons[6].data, true );
 					infospotroom11.position.set( -4980.40, -414.81, -28.95 );
 					room1.add(infospotroom11);
-infospotroom11.addEventListener('click', function(){
-window.open( 'https://masteec.github.io', '_blank');
-});
-viewer.add( room1 );
-var room3 = new PANOLENS.ImagePanorama( "panoramas/room3.jpg" );
+
+infospotroom11.addEventListener('click', function(){
+
+window.open( 'https://masteec.github.io', '_blank');
+
+});
+
+viewer.add( room1 );
+
+var room3 = new PANOLENS.ImagePanorama( "panoramas/room3.jpg" );
 			room3.addEventListener('progress', onProgress);
 			room3.addEventListener('load', function(e){
 				endLoading();
@@ -150,56 +163,90 @@
 			room3.addEventListener('click', function(e){
 			});
 
-var infospotroom30 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+var infospotroom30 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom30.position.set( 4219.11, 761.42, 2562.58 );
 					room3.add(infospotroom30);
-infospotroom30.addEventListener('click', function(){
-showMedia(1, 'images/1.png');
-});
-var infospotroom31 = new PANOLENS.Infospot( 512, hotspotIcons[7].data, true );
+
+infospotroom30.addEventListener('click', function(){
+
+showMedia(1, 'images/1.png');
+
+});
+
+var infospotroom31 = new PANOLENS.Infospot( 512, hotspotIcons[7].data, true );
 					infospotroom31.position.set( -4980.84, -189.81, 223.22 );
 					room3.add(infospotroom31);
-infospotroom31.addEventListener('click', function(){
-ChangePanorama('room6');
-});
-var infospotroom32 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom31.addEventListener('click', function(){
+
+ChangePanorama('room6');
+
+});
+
+var infospotroom32 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom32.position.set( -966.61, -1909.73, 4518.20 );
 					room3.add(infospotroom32);
-infospotroom32.addEventListener('click', function(){
-ChangePanorama('room11hcm7K');
-});
-var infospotroom33 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom32.addEventListener('click', function(){
+
+ChangePanorama('room11hcm7K');
+
+});
+
+var infospotroom33 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom33.position.set( 4902.91, -448.88, -821.59 );
 					room3.add(infospotroom33);
-infospotroom33.addEventListener('click', function(){
-showMedia(1, 'images/2.png');
-});
-var infospotroom34 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom33.addEventListener('click', function(){
+
+showMedia(1, 'images/2.png');
+
+});
+
+var infospotroom34 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom34.position.set( 4345.95, 779.64, -2334.19 );
 					room3.add(infospotroom34);
-infospotroom34.addEventListener('click', function(){
-showMedia(1, 'images/3.png');
-});
-var infospotroom35 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom34.addEventListener('click', function(){
+
+showMedia(1, 'images/3.png');
+
+});
+
+var infospotroom35 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom35.position.set( -1717.04, -1446.82, -4457.15 );
 					room3.add(infospotroom35);
-infospotroom35.addEventListener('click', function(){
-showMedia(1, 'images/4.png');
-});
-var infospotroom36 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom35.addEventListener('click', function(){
+
+showMedia(1, 'images/4.png');
+
+});
+
+var infospotroom36 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom36.position.set( -4054.05, 177.85, -2912.31 );
 					room3.add(infospotroom36);
-infospotroom36.addEventListener('click', function(){
-showMedia(1, 'images/5.png');
-});
-var infospotroom37 = new PANOLENS.Infospot( 512, hotspotIcons[4].data, true );
+
+infospotroom36.addEventListener('click', function(){
+
+showMedia(1, 'images/5.png');
+
+});
+
+var infospotroom37 = new PANOLENS.Infospot( 512, hotspotIcons[4].data, true );
 					infospotroom37.position.set( -4285.74, 1.65, 2568.22 );
 					room3.add(infospotroom37);
-infospotroom37.addEventListener('click', function(){
-showMedia(1, 'images/10.png');
-});
-viewer.add( room3 );
-var room4 = new PANOLENS.ImagePanorama( "panoramas/room4.jpg" );
+
+infospotroom37.addEventListener('click', function(){
+
+showMedia(1, 'images/10.png');
+
+});
+
+viewer.add( room3 );
+
+var room4 = new PANOLENS.ImagePanorama( "panoramas/room4.jpg" );
 			room4.addEventListener('progress', onProgress);
 			room4.addEventListener('load', function(e){
 				endLoading();
@@ -210,44 +257,70 @@
 			room4.addEventListener('click', function(e){
 			});
 
-var infospotroom40 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+var infospotroom40 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom40.position.set( 4196.80, -588.86, -2634.39 );
 					room4.add(infospotroom40);
-infospotroom40.addEventListener('click', function(){
-showMedia(1, 'images/6.png');
-});
-var infospotroom41 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom40.addEventListener('click', function(){
+
+showMedia(1, 'images/6.png');
+
+});
+
+var infospotroom41 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom41.position.set( 4438.89, -675.96, 2178.79 );
 					room4.add(infospotroom41);
-infospotroom41.addEventListener('click', function(){
-showMedia(1, 'images/7.png');
-});
-var infospotroom42 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom41.addEventListener('click', function(){
+
+showMedia(1, 'images/7.png');
+
+});
+
+var infospotroom42 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom42.position.set( -4918.89, -217.98, -807.13 );
 					room4.add(infospotroom42);
-infospotroom42.addEventListener('click', function(){
-showMedia(1, 'images/8.png');
-});
-var infospotroom43 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom42.addEventListener('click', function(){
+
+showMedia(1, 'images/8.png');
+
+});
+
+var infospotroom43 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom43.position.set( -4361.11, 2411.17, 283.05 );
 					room4.add(infospotroom43);
-infospotroom43.addEventListener('click', function(){
-showMedia(1, 'images/20.png');
-});
-var infospotroom44 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom43.addEventListener('click', function(){
+
+showMedia(1, 'images/20.png');
+
+});
+
+var infospotroom44 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom44.position.set( -4566.59, -240.38, -2010.32 );
 					room4.add(infospotroom44);
-infospotroom44.addEventListener('click', function(){
-ChangePanorama('room12');
-});
-var infospotroom45 = new PANOLENS.Infospot( 512, hotspotIcons[8].data, true );
+
+infospotroom44.addEventListener('click', function(){
+
+ChangePanorama('room12');
+
+});
+
+var infospotroom45 = new PANOLENS.Infospot( 512, hotspotIcons[8].data, true );
 					infospotroom45.position.set( 3704.12, -735.77, 3271.02 );
 					room4.add(infospotroom45);
-infospotroom45.addEventListener('click', function(){
-ChangePanorama('room9');
-});
-viewer.add( room4 );
-var room5 = new PANOLENS.ImagePanorama( "panoramas/room5.jpg" );
+
+infospotroom45.addEventListener('click', function(){
+
+ChangePanorama('room9');
+
+});
+
+viewer.add( room4 );
+
+var room5 = new PANOLENS.ImagePanorama( "panoramas/room5.jpg" );
 			room5.addEventListener('progress', onProgress);
 			room5.addEventListener('load', function(e){
 				endLoading();
@@ -258,80 +331,130 @@
 			room5.addEventListener('click', function(e){
 			});
 
-var infospotroom50 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+var infospotroom50 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom50.position.set( 2822.22, 420.38, 4098.57 );
 					room5.add(infospotroom50);
-infospotroom50.addEventListener('click', function(){
-showMedia(1, 'images/54.png');
-});
-var infospotroom51 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom50.addEventListener('click', function(){
+
+showMedia(1, 'images/54.png');
+
+});
+
+var infospotroom51 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom51.position.set( 1904.20, 895.94, -4527.38 );
 					room5.add(infospotroom51);
-infospotroom51.addEventListener('click', function(){
-showMedia(1, 'images/30.png');
-});
-var infospotroom52 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom51.addEventListener('click', function(){
+
+showMedia(1, 'images/30.png');
+
+});
+
+var infospotroom52 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom52.position.set( -1415.55, 182.46, -4782.58 );
 					room5.add(infospotroom52);
-infospotroom52.addEventListener('click', function(){
-showMedia(1, 'images/36.png');
-});
-var infospotroom53 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom52.addEventListener('click', function(){
+
+showMedia(1, 'images/36.png');
+
+});
+
+var infospotroom53 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom53.position.set( -3512.54, 239.04, -3535.58 );
 					room5.add(infospotroom53);
-infospotroom53.addEventListener('click', function(){
-showMedia(1, 'images/35.png');
-});
-var infospotroom54 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom53.addEventListener('click', function(){
+
+showMedia(1, 'images/35.png');
+
+});
+
+var infospotroom54 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom54.position.set( 4896.75, 32.66, 993.41 );
 					room5.add(infospotroom54);
-infospotroom54.addEventListener('click', function(){
-showMedia(1, 'images/37.png');
-});
-var infospotroom55 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom54.addEventListener('click', function(){
+
+showMedia(1, 'images/37.png');
+
+});
+
+var infospotroom55 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom55.position.set( 4165.19, -82.39, -2748.04 );
 					room5.add(infospotroom55);
-infospotroom55.addEventListener('click', function(){
-showMedia(1, 'images/32.png');
-});
-var infospotroom56 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom55.addEventListener('click', function(){
+
+showMedia(1, 'images/32.png');
+
+});
+
+var infospotroom56 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom56.position.set( 3877.03, -222.09, 3132.61 );
 					room5.add(infospotroom56);
-infospotroom56.addEventListener('click', function(){
-showMedia(1, 'images/34.png');
-});
-var infospotroom57 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom56.addEventListener('click', function(){
+
+showMedia(1, 'images/34.png');
+
+});
+
+var infospotroom57 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom57.position.set( 118.60, 628.90, 4950.37 );
 					room5.add(infospotroom57);
-infospotroom57.addEventListener('click', function(){
-showMedia(1, 'images/55.png');
-});
-var infospotroom58 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom57.addEventListener('click', function(){
+
+showMedia(1, 'images/55.png');
+
+});
+
+var infospotroom58 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom58.position.set( -4918.26, 377.81, -771.04 );
 					room5.add(infospotroom58);
-infospotroom58.addEventListener('click', function(){
-showMedia(1, 'images/31.png');
-});
-var infospotroom59 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom58.addEventListener('click', function(){
+
+showMedia(1, 'images/31.png');
+
+});
+
+var infospotroom59 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom59.position.set( 2393.37, -1027.16, -4260.85 );
 					room5.add(infospotroom59);
-infospotroom59.addEventListener('click', function(){
-ChangePanorama('room9');
-});
-var infospotroom510 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom59.addEventListener('click', function(){
+
+ChangePanorama('room9');
+
+});
+
+var infospotroom510 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom510.position.set( -1360.43, -861.26, 4724.85 );
 					room5.add(infospotroom510);
-infospotroom510.addEventListener('click', function(){
-ChangePanorama('room8');
-});
-var infospotroom511 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom510.addEventListener('click', function(){
+
+ChangePanorama('room8');
+
+});
+
+var infospotroom511 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom511.position.set( -2866.99, -630.20, 4039.92 );
 					room5.add(infospotroom511);
-infospotroom511.addEventListener('click', function(){
-ChangePanorama('room6');
-});
-viewer.add( room5 );
-var room6 = new PANOLENS.ImagePanorama( "panoramas/room6.jpg" );
+
+infospotroom511.addEventListener('click', function(){
+
+ChangePanorama('room6');
+
+});
+
+viewer.add( room5 );
+
+var room6 = new PANOLENS.ImagePanorama( "panoramas/room6.jpg" );
 			room6.addEventListener('progress', onProgress);
 			room6.addEventListener('load', function(e){
 				endLoading();
@@ -342,62 +465,100 @@
 			room6.addEventListener('click', function(e){
 			});
 
-var infospotroom60 = new PANOLENS.Infospot( 512, hotspotIcons[10].data, true );
+
+var infospotroom60 = new PANOLENS.Infospot( 512, hotspotIcons[10].data, true );
 					infospotroom60.position.set( -2632.36, -222.00, -4233.79 );
 					room6.add(infospotroom60);
-infospotroom60.addEventListener('click', function(){
-ChangePanorama('room8');
-});
-var infospotroom61 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom60.addEventListener('click', function(){
+
+ChangePanorama('room8');
+
+});
+
+var infospotroom61 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom61.position.set( 2769.49, 335.96, -4139.40 );
 					room6.add(infospotroom61);
-infospotroom61.addEventListener('click', function(){
-showMedia(1, 'images/9.png');
-});
-var infospotroom62 = new PANOLENS.Infospot( 512, hotspotIcons[8].data, true );
+
+infospotroom61.addEventListener('click', function(){
+
+showMedia(1, 'images/9.png');
+
+});
+
+var infospotroom62 = new PANOLENS.Infospot( 512, hotspotIcons[8].data, true );
 					infospotroom62.position.set( -2879.28, -502.42, 4049.95 );
 					room6.add(infospotroom62);
-infospotroom62.addEventListener('click', function(){
-ChangePanorama('room3');
-});
-var infospotroom63 = new PANOLENS.Infospot( 512, hotspotIcons[10].data, true );
+
+infospotroom62.addEventListener('click', function(){
+
+ChangePanorama('room3');
+
+});
+
+var infospotroom63 = new PANOLENS.Infospot( 512, hotspotIcons[10].data, true );
 					infospotroom63.position.set( -4564.93, 1187.39, 1640.15 );
 					room6.add(infospotroom63);
-infospotroom63.addEventListener('click', function(){
-ChangePanorama('room7v2');
-});
-var infospotroom64 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom63.addEventListener('click', function(){
+
+ChangePanorama('room7v2');
+
+});
+
+var infospotroom64 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom64.position.set( -3465.11, -926.24, 3468.86 );
 					room6.add(infospotroom64);
-infospotroom64.addEventListener('click', function(){
-ChangePanorama('room10');
-});
-var infospotroom65 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom64.addEventListener('click', function(){
+
+ChangePanorama('room10');
+
+});
+
+var infospotroom65 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom65.position.set( 4382.35, 236.76, -2377.04 );
 					room6.add(infospotroom65);
-infospotroom65.addEventListener('click', function(){
-showMedia(1, 'images/93.png');
-});
-var infospotroom66 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom65.addEventListener('click', function(){
+
+showMedia(1, 'images/93.png');
+
+});
+
+var infospotroom66 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom66.position.set( 4290.61, -437.95, 2522.69 );
 					room6.add(infospotroom66);
-infospotroom66.addEventListener('click', function(){
-showMedia(1, 'images/95.png');
-});
-var infospotroom67 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom66.addEventListener('click', function(){
+
+showMedia(1, 'images/95.png');
+
+});
+
+var infospotroom67 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom67.position.set( 4378.69, 781.87, 2269.36 );
 					room6.add(infospotroom67);
-infospotroom67.addEventListener('click', function(){
-showMedia(1, 'images/94.png');
-});
-var infospotroom68 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom67.addEventListener('click', function(){
+
+showMedia(1, 'images/94.png');
+
+});
+
+var infospotroom68 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom68.position.set( 2999.70, -798.20, 3912.67 );
 					room6.add(infospotroom68);
-infospotroom68.addEventListener('click', function(){
-showMedia(1, 'images/92.png');
-});
-viewer.add( room6 );
-var room8 = new PANOLENS.ImagePanorama( "panoramas/room8.jpg" );
+
+infospotroom68.addEventListener('click', function(){
+
+showMedia(1, 'images/92.png');
+
+});
+
+viewer.add( room6 );
+
+var room8 = new PANOLENS.ImagePanorama( "panoramas/room8.jpg" );
 			room8.addEventListener('progress', onProgress);
 			room8.addEventListener('load', function(e){
 				endLoading();
@@ -408,98 +569,160 @@
 			room8.addEventListener('click', function(e){
 			});
 
-var infospotroom80 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+var infospotroom80 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom80.position.set( -2699.94, -626.48, 4148.93 );
 					room8.add(infospotroom80);
-infospotroom80.addEventListener('click', function(){
-showMedia(1, 'images/58.png');
-});
-var infospotroom81 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom80.addEventListener('click', function(){
+
+showMedia(1, 'images/58.png');
+
+});
+
+var infospotroom81 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom81.position.set( 1998.29, -2722.10, -3677.88 );
 					room8.add(infospotroom81);
-infospotroom81.addEventListener('click', function(){
-showMedia(1, 'images/38.png');
-});
-var infospotroom82 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom81.addEventListener('click', function(){
+
+showMedia(1, 'images/38.png');
+
+});
+
+var infospotroom82 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom82.position.set( 4574.83, 288.14, 1983.64 );
 					room8.add(infospotroom82);
-infospotroom82.addEventListener('click', function(){
-showMedia(1, 'images/11.png');
-});
-var infospotroom83 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom82.addEventListener('click', function(){
+
+showMedia(1, 'images/11.png');
+
+});
+
+var infospotroom83 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom83.position.set( 4719.05, -171.96, 1620.66 );
 					room8.add(infospotroom83);
-infospotroom83.addEventListener('click', function(){
-showMedia(1, 'images/12.png');
-});
-var infospotroom84 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom83.addEventListener('click', function(){
+
+showMedia(1, 'images/12.png');
+
+});
+
+var infospotroom84 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom84.position.set( 4609.50, -987.43, 1639.56 );
 					room8.add(infospotroom84);
-infospotroom84.addEventListener('click', function(){
-showMedia(1, 'images/13.png');
-});
-var infospotroom85 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom84.addEventListener('click', function(){
+
+showMedia(1, 'images/13.png');
+
+});
+
+var infospotroom85 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom85.position.set( 4811.18, -519.45, 1218.95 );
 					room8.add(infospotroom85);
-infospotroom85.addEventListener('click', function(){
-showMedia(1, 'images/14.png');
-});
-var infospotroom86 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom85.addEventListener('click', function(){
+
+showMedia(1, 'images/14.png');
+
+});
+
+var infospotroom86 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom86.position.set( 4933.69, -619.29, 458.60 );
 					room8.add(infospotroom86);
-infospotroom86.addEventListener('click', function(){
-showMedia(1, 'images/15.png');
-});
-var infospotroom87 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom86.addEventListener('click', function(){
+
+showMedia(1, 'images/15.png');
+
+});
+
+var infospotroom87 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom87.position.set( 4952.28, -100.81, -625.69 );
 					room8.add(infospotroom87);
-infospotroom87.addEventListener('click', function(){
-showMedia(1, 'images/17.png');
-});
-var infospotroom88 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom87.addEventListener('click', function(){
+
+showMedia(1, 'images/17.png');
+
+});
+
+var infospotroom88 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom88.position.set( 4964.34, 285.26, 466.67 );
 					room8.add(infospotroom88);
-infospotroom88.addEventListener('click', function(){
-showMedia(1, 'images/16.png');
-});
-var infospotroom89 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom88.addEventListener('click', function(){
+
+showMedia(1, 'images/16.png');
+
+});
+
+var infospotroom89 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom89.position.set( -3730.00, -238.33, -3313.16 );
 					room8.add(infospotroom89);
-infospotroom89.addEventListener('click', function(){
-showMedia(1, 'images/41.png');
-});
-var infospotroom810 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom89.addEventListener('click', function(){
+
+showMedia(1, 'images/41.png');
+
+});
+
+var infospotroom810 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom810.position.set( 4839.05, -215.78, -1199.75 );
 					room8.add(infospotroom810);
-infospotroom810.addEventListener('click', function(){
-showMedia(1, 'images/18.png');
-});
-var infospotroom811 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom810.addEventListener('click', function(){
+
+showMedia(1, 'images/18.png');
+
+});
+
+var infospotroom811 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom811.position.set( 4664.79, -239.10, -1754.64 );
 					room8.add(infospotroom811);
-infospotroom811.addEventListener('click', function(){
-showMedia(1, 'images/19.png');
-});
-var infospotroom812 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
+
+infospotroom811.addEventListener('click', function(){
+
+showMedia(1, 'images/19.png');
+
+});
+
+var infospotroom812 = new PANOLENS.Infospot( 512, hotspotIcons[0].data, true );
 					infospotroom812.position.set( 3343.14, -1890.40, -3192.71 );
 					room8.add(infospotroom812);
-infospotroom812.addEventListener('click', function(){
-showMedia(2, 'videos/maxilar.mp4');
-});
-var infospotroom813 = new PANOLENS.Infospot( 512, hotspotIcons[8].data, true );
+
+infospotroom812.addEventListener('click', function(){
+
+showMedia(2, 'videos/maxilar.mp4');
+
+});
+
+var infospotroom813 = new PANOLENS.Infospot( 512, hotspotIcons[8].data, true );
 					infospotroom813.position.set( -3597.20, -815.80, 3367.79 );
 					room8.add(infospotroom813);
-infospotroom813.addEventListener('click', function(){
-ChangePanorama('room6');
-});
-var infospotroom814 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom813.addEventListener('click', function(){
+
+ChangePanorama('room6');
+
+});
+
+var infospotroom814 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom814.position.set( -4389.02, -285.59, -2359.74 );
 					room8.add(infospotroom814);
-infospotroom814.addEventListener('click', function(){
-ChangePanorama('room5');
-});
-viewer.add( room8 );
-var room9 = new PANOLENS.ImagePanorama( "panoramas/room9.jpg" );
+
+infospotroom814.addEventListener('click', function(){
+
+ChangePanorama('room5');
+
+});
+
+viewer.add( room8 );
+
+var room9 = new PANOLENS.ImagePanorama( "panoramas/room9.jpg" );
 			room9.addEventListener('progress', onProgress);
 			room9.addEventListener('load', function(e){
 				endLoading();
@@ -510,98 +733,160 @@
 			room9.addEventListener('click', function(e){
 			});
 
-var infospotroom90 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+var infospotroom90 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom90.position.set( 1695.65, 83.59, -4693.97 );
 					room9.add(infospotroom90);
-infospotroom90.addEventListener('click', function(){
-showMedia(1, 'images/45.png');
-});
-var infospotroom91 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom90.addEventListener('click', function(){
+
+showMedia(1, 'images/45.png');
+
+});
+
+var infospotroom91 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom91.position.set( 4210.93, -124.27, 2674.59 );
 					room9.add(infospotroom91);
-infospotroom91.addEventListener('click', function(){
-showMedia(1, 'images/46.png');
-});
-var infospotroom92 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom91.addEventListener('click', function(){
+
+showMedia(1, 'images/46.png');
+
+});
+
+var infospotroom92 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom92.position.set( 3574.17, -344.68, 3468.08 );
 					room9.add(infospotroom92);
-infospotroom92.addEventListener('click', function(){
-showMedia(1, 'images/47.png');
-});
-var infospotroom93 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom92.addEventListener('click', function(){
+
+showMedia(1, 'images/47.png');
+
+});
+
+var infospotroom93 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom93.position.set( 2570.62, -446.22, 4258.31 );
 					room9.add(infospotroom93);
-infospotroom93.addEventListener('click', function(){
-showMedia(1, 'images/48.png');
-});
-var infospotroom94 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom93.addEventListener('click', function(){
+
+showMedia(1, 'images/48.png');
+
+});
+
+var infospotroom94 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom94.position.set( -278.51, -510.00, 4956.06 );
 					room9.add(infospotroom94);
-infospotroom94.addEventListener('click', function(){
-showMedia(1, 'images/49.png');
-});
-var infospotroom95 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom94.addEventListener('click', function(){
+
+showMedia(1, 'images/49.png');
+
+});
+
+var infospotroom95 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom95.position.set( 2857.42, -177.32, -4089.72 );
 					room9.add(infospotroom95);
-infospotroom95.addEventListener('click', function(){
-showMedia(1, 'images/50.png');
-});
-var infospotroom96 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom95.addEventListener('click', function(){
+
+showMedia(1, 'images/50.png');
+
+});
+
+var infospotroom96 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom96.position.set( 3824.36, -90.47, -3205.86 );
 					room9.add(infospotroom96);
-infospotroom96.addEventListener('click', function(){
-showMedia(1, 'images/51.png');
-});
-var infospotroom97 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom96.addEventListener('click', function(){
+
+showMedia(1, 'images/51.png');
+
+});
+
+var infospotroom97 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom97.position.set( 4955.59, -267.11, -563.09 );
 					room9.add(infospotroom97);
-infospotroom97.addEventListener('click', function(){
-showMedia(1, 'images/52.png');
-});
-var infospotroom98 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom97.addEventListener('click', function(){
+
+showMedia(1, 'images/52.png');
+
+});
+
+var infospotroom98 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom98.position.set( 4792.16, -301.77, 1361.70 );
 					room9.add(infospotroom98);
-infospotroom98.addEventListener('click', function(){
-showMedia(1, 'images/53.png');
-});
-var infospotroom99 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom98.addEventListener('click', function(){
+
+showMedia(1, 'images/53.png');
+
+});
+
+var infospotroom99 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom99.position.set( -3007.22, -104.75, -3984.50 );
 					room9.add(infospotroom99);
-infospotroom99.addEventListener('click', function(){
-showMedia(1, 'images/56.png');
-});
-var infospotroom910 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom99.addEventListener('click', function(){
+
+showMedia(1, 'images/56.png');
+
+});
+
+var infospotroom910 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom910.position.set( -1227.58, -364.18, -4825.56 );
 					room9.add(infospotroom910);
-infospotroom910.addEventListener('click', function(){
-showMedia(1, 'images/57.png');
-});
-var infospotroom911 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom910.addEventListener('click', function(){
+
+showMedia(1, 'images/57.png');
+
+});
+
+var infospotroom911 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom911.position.set( -4914.83, 171.12, -844.55 );
 					room9.add(infospotroom911);
-infospotroom911.addEventListener('click', function(){
-showMedia(1, 'images/81.png');
-});
-var infospotroom912 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom911.addEventListener('click', function(){
+
+showMedia(1, 'images/81.png');
+
+});
+
+var infospotroom912 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom912.position.set( -4055.46, -863.83, 2780.30 );
 					room9.add(infospotroom912);
-infospotroom912.addEventListener('click', function(){
-showMedia(1, 'images/82.jpg');
-});
-var infospotroom913 = new PANOLENS.Infospot( 512, hotspotIcons[10].data, true );
+
+infospotroom912.addEventListener('click', function(){
+
+showMedia(1, 'images/82.jpg');
+
+});
+
+var infospotroom913 = new PANOLENS.Infospot( 512, hotspotIcons[10].data, true );
 					infospotroom913.position.set( -4059.39, -465.86, -2872.67 );
 					room9.add(infospotroom913);
-infospotroom913.addEventListener('click', function(){
-ChangePanorama('room4');
-});
-var infospotroom914 = new PANOLENS.Infospot( 512, hotspotIcons[10].data, true );
+
+infospotroom913.addEventListener('click', function(){
+
+ChangePanorama('room4');
+
+});
+
+var infospotroom914 = new PANOLENS.Infospot( 512, hotspotIcons[10].data, true );
 					infospotroom914.position.set( -2767.87, -935.15, 4046.64 );
 					room9.add(infospotroom914);
-infospotroom914.addEventListener('click', function(){
-ChangePanorama('room5');
-});
-viewer.add( room9 );
-var room10 = new PANOLENS.ImagePanorama( "panoramas/room10.jpg" );
+
+infospotroom914.addEventListener('click', function(){
+
+ChangePanorama('room5');
+
+});
+
+viewer.add( room9 );
+
+var room10 = new PANOLENS.ImagePanorama( "panoramas/room10.jpg" );
 			room10.addEventListener('progress', onProgress);
 			room10.addEventListener('load', function(e){
 				endLoading();
@@ -612,50 +897,80 @@
 			room10.addEventListener('click', function(e){
 			});
 
-var infospotroom100 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+var infospotroom100 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom100.position.set( 940.82, -467.98, 4881.74 );
 					room10.add(infospotroom100);
-infospotroom100.addEventListener('click', function(){
-showMedia(1, 'images/62.png');
-});
-var infospotroom101 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom100.addEventListener('click', function(){
+
+showMedia(1, 'images/62.png');
+
+});
+
+var infospotroom101 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom101.position.set( 3614.42, -999.44, -3298.98 );
 					room10.add(infospotroom101);
-infospotroom101.addEventListener('click', function(){
-showMedia(1, 'images/76.png');
-});
-var infospotroom102 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom101.addEventListener('click', function(){
+
+showMedia(1, 'images/76.png');
+
+});
+
+var infospotroom102 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom102.position.set( -4972.65, -201.88, 370.53 );
 					room10.add(infospotroom102);
-infospotroom102.addEventListener('click', function(){
-showMedia(1, 'images/77.jpg');
-});
-var infospotroom103 = new PANOLENS.Infospot( 512, hotspotIcons[8].data, true );
+
+infospotroom102.addEventListener('click', function(){
+
+showMedia(1, 'images/77.jpg');
+
+});
+
+var infospotroom103 = new PANOLENS.Infospot( 512, hotspotIcons[8].data, true );
 					infospotroom103.position.set( -4775.55, -675.38, 1280.68 );
 					room10.add(infospotroom103);
-infospotroom103.addEventListener('click', function(){
-ChangePanorama('room11hcm7K');
-});
-var infospotroom104 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom103.addEventListener('click', function(){
+
+ChangePanorama('room11hcm7K');
+
+});
+
+var infospotroom104 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom104.position.set( 3206.08, -2227.43, -3113.34 );
 					room10.add(infospotroom104);
-infospotroom104.addEventListener('click', function(){
-showMedia(1, 'images/78.jpg');
-});
-var infospotroom105 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom104.addEventListener('click', function(){
+
+showMedia(1, 'images/78.jpg');
+
+});
+
+var infospotroom105 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom105.position.set( -143.90, -3019.10, -3974.34 );
 					room10.add(infospotroom105);
-infospotroom105.addEventListener('click', function(){
-showMedia(1, 'images/79.jpg');
-});
-var infospotroom106 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom105.addEventListener('click', function(){
+
+showMedia(1, 'images/79.jpg');
+
+});
+
+var infospotroom106 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom106.position.set( 1875.00, -2524.69, -3877.90 );
 					room10.add(infospotroom106);
-infospotroom106.addEventListener('click', function(){
-showMedia(1, 'images/80.jpg');
-});
-viewer.add( room10 );
-var room11hcm7K = new PANOLENS.ImagePanorama( "panoramas/room11hcm7K.jpg" );
+
+infospotroom106.addEventListener('click', function(){
+
+showMedia(1, 'images/80.jpg');
+
+});
+
+viewer.add( room10 );
+
+var room11hcm7K = new PANOLENS.ImagePanorama( "panoramas/room11hcm7K.jpg" );
 			room11hcm7K.addEventListener('progress', onProgress);
 			room11hcm7K.addEventListener('load', function(e){
 				endLoading();
@@ -666,20 +981,30 @@
 			room11hcm7K.addEventListener('click', function(e){
 			});
 
-var infospotroom11hcm7K0 = new PANOLENS.Infospot( 512, hotspotIcons[8].data, true );
+
+var infospotroom11hcm7K0 = new PANOLENS.Infospot( 512, hotspotIcons[8].data, true );
 					infospotroom11hcm7K0.position.set( 438.82, 66.68, -4974.38 );
 					room11hcm7K.add(infospotroom11hcm7K0);
-infospotroom11hcm7K0.addEventListener('click', function(){
-ChangePanorama('room3');
-});
-var infospotroom11hcm7K1 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom11hcm7K0.addEventListener('click', function(){
+
+ChangePanorama('room3');
+
+});
+
+var infospotroom11hcm7K1 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom11hcm7K1.position.set( 4816.49, -769.93, 1084.73 );
 					room11hcm7K.add(infospotroom11hcm7K1);
-infospotroom11hcm7K1.addEventListener('click', function(){
-ChangePanorama('room1');
-});
-viewer.add( room11hcm7K );
-var room12 = new PANOLENS.ImagePanorama( "panoramas/room12.jpg" );
+
+infospotroom11hcm7K1.addEventListener('click', function(){
+
+ChangePanorama('room1');
+
+});
+
+viewer.add( room11hcm7K );
+
+var room12 = new PANOLENS.ImagePanorama( "panoramas/room12.jpg" );
 			room12.addEventListener('progress', onProgress);
 			room12.addEventListener('load', function(e){
 				endLoading();
@@ -690,68 +1015,110 @@
 			room12.addEventListener('click', function(e){
 			});
 
-var infospotroom120 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+var infospotroom120 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom120.position.set( 2754.38, -243.03, -4153.56 );
 					room12.add(infospotroom120);
-infospotroom120.addEventListener('click', function(){
-showMedia(1, 'images/24.png');
-});
-var infospotroom121 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom120.addEventListener('click', function(){
+
+showMedia(1, 'images/24.png');
+
+});
+
+var infospotroom121 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom121.position.set( 4935.19, 64.52, -742.74 );
 					room12.add(infospotroom121);
-infospotroom121.addEventListener('click', function(){
-showMedia(1, 'images/39.png');
-});
-var infospotroom122 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom121.addEventListener('click', function(){
+
+showMedia(1, 'images/39.png');
+
+});
+
+var infospotroom122 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom122.position.set( 4756.21, -732.16, 1326.93 );
 					room12.add(infospotroom122);
-infospotroom122.addEventListener('click', function(){
-showMedia(1, 'images/22.png');
-});
-var infospotroom123 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom122.addEventListener('click', function(){
+
+showMedia(1, 'images/22.png');
+
+});
+
+var infospotroom123 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom123.position.set( 4518.51, 14.74, 2129.00 );
 					room12.add(infospotroom123);
-infospotroom123.addEventListener('click', function(){
-showMedia(1, 'images/21.png');
-});
-var infospotroom124 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom123.addEventListener('click', function(){
+
+showMedia(1, 'images/21.png');
+
+});
+
+var infospotroom124 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom124.position.set( 3449.07, 245.99, 3598.66 );
 					room12.add(infospotroom124);
-infospotroom124.addEventListener('click', function(){
-showMedia(1, 'images/23.png');
-});
-var infospotroom125 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom124.addEventListener('click', function(){
+
+showMedia(1, 'images/23.png');
+
+});
+
+var infospotroom125 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom125.position.set( -2687.77, -167.90, -4200.33 );
 					room12.add(infospotroom125);
-infospotroom125.addEventListener('click', function(){
-ChangePanorama('room4');
-});
-var infospotroom126 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom125.addEventListener('click', function(){
+
+ChangePanorama('room4');
+
+});
+
+var infospotroom126 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom126.position.set( 1089.66, -1268.01, 4705.10 );
 					room12.add(infospotroom126);
-infospotroom126.addEventListener('click', function(){
-ChangePanorama('room14');
-});
-var infospotroom127 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom126.addEventListener('click', function(){
+
+ChangePanorama('room14');
+
+});
+
+var infospotroom127 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom127.position.set( 4974.27, 164.10, 368.01 );
 					room12.add(infospotroom127);
-infospotroom127.addEventListener('click', function(){
-showMedia(1, 'images/66.jpg');
-});
-var infospotroom128 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom127.addEventListener('click', function(){
+
+showMedia(1, 'images/66.jpg');
+
+});
+
+var infospotroom128 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom128.position.set( 4776.44, 172.74, 1439.94 );
 					room12.add(infospotroom128);
-infospotroom128.addEventListener('click', function(){
-showMedia(1, 'images/65.jpg');
-});
-var infospotroom129 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom128.addEventListener('click', function(){
+
+showMedia(1, 'images/65.jpg');
+
+});
+
+var infospotroom129 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom129.position.set( 4022.36, 52.24, 2963.73 );
 					room12.add(infospotroom129);
-infospotroom129.addEventListener('click', function(){
-showMedia(1, 'images/67.jpg');
-});
-viewer.add( room12 );
-var room13 = new PANOLENS.ImagePanorama( "panoramas/room13.jpg" );
+
+infospotroom129.addEventListener('click', function(){
+
+showMedia(1, 'images/67.jpg');
+
+});
+
+viewer.add( room12 );
+
+var room13 = new PANOLENS.ImagePanorama( "panoramas/room13.jpg" );
 			room13.addEventListener('progress', onProgress);
 			room13.addEventListener('load', function(e){
 				endLoading();
@@ -762,50 +1129,80 @@
 			room13.addEventListener('click', function(e){
 			});
 
-var infospotroom130 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+var infospotroom130 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom130.position.set( 4958.57, -19.01, -606.50 );
 					room13.add(infospotroom130);
-infospotroom130.addEventListener('click', function(){
-showMedia(1, 'images/71.jpg');
-});
-var infospotroom131 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom130.addEventListener('click', function(){
+
+showMedia(1, 'images/71.jpg');
+
+});
+
+var infospotroom131 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom131.position.set( 4325.74, 197.20, -2491.57 );
 					room13.add(infospotroom131);
-infospotroom131.addEventListener('click', function(){
-showMedia(1, 'images/72.jpg');
-});
-var infospotroom132 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom131.addEventListener('click', function(){
+
+showMedia(1, 'images/72.jpg');
+
+});
+
+var infospotroom132 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom132.position.set( 4313.05, -1324.93, 2131.79 );
 					room13.add(infospotroom132);
-infospotroom132.addEventListener('click', function(){
-showMedia(1, 'images/74.jpg');
-});
-var infospotroom133 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom132.addEventListener('click', function(){
+
+showMedia(1, 'images/74.jpg');
+
+});
+
+var infospotroom133 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom133.position.set( 3917.70, -2178.19, 2203.74 );
 					room13.add(infospotroom133);
-infospotroom133.addEventListener('click', function(){
-showMedia(1, 'images/60.png');
-});
-var infospotroom134 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom133.addEventListener('click', function(){
+
+showMedia(1, 'images/60.png');
+
+});
+
+var infospotroom134 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom134.position.set( -1780.97, -593.96, -4622.72 );
 					room13.add(infospotroom134);
-infospotroom134.addEventListener('click', function(){
-ChangePanorama('room14');
-});
-var infospotroom135 = new PANOLENS.Infospot( 512, hotspotIcons[8].data, true );
+
+infospotroom134.addEventListener('click', function(){
+
+ChangePanorama('room14');
+
+});
+
+var infospotroom135 = new PANOLENS.Infospot( 512, hotspotIcons[8].data, true );
 					infospotroom135.position.set( 4289.40, -654.64, 2477.51 );
 					room13.add(infospotroom135);
-infospotroom135.addEventListener('click', function(){
-ChangePanorama('room10');
-});
-var infospotroom136 = new PANOLENS.Infospot( 512, hotspotIcons[10].data, true );
+
+infospotroom135.addEventListener('click', function(){
+
+ChangePanorama('room10');
+
+});
+
+var infospotroom136 = new PANOLENS.Infospot( 512, hotspotIcons[10].data, true );
 					infospotroom136.position.set( 3822.05, 2735.55, 1693.94 );
 					room13.add(infospotroom136);
-infospotroom136.addEventListener('click', function(){
-ChangePanorama('room7v2');
-});
-viewer.add( room13 );
-var room14 = new PANOLENS.ImagePanorama( "panoramas/room14.jpg" );
+
+infospotroom136.addEventListener('click', function(){
+
+ChangePanorama('room7v2');
+
+});
+
+viewer.add( room13 );
+
+var room14 = new PANOLENS.ImagePanorama( "panoramas/room14.jpg" );
 			room14.addEventListener('progress', onProgress);
 			room14.addEventListener('load', function(e){
 				endLoading();
@@ -816,74 +1213,120 @@
 			room14.addEventListener('click', function(e){
 			});
 
-var infospotroom140 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+var infospotroom140 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom140.position.set( 3820.21, 751.72, -3124.66 );
 					room14.add(infospotroom140);
-infospotroom140.addEventListener('click', function(){
-showMedia(1, 'images/25.png');
-});
-var infospotroom141 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom140.addEventListener('click', function(){
+
+showMedia(1, 'images/25.png');
+
+});
+
+var infospotroom141 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom141.position.set( 4367.23, -788.97, -2288.80 );
 					room14.add(infospotroom141);
-infospotroom141.addEventListener('click', function(){
-showMedia(1, 'images/26.png');
-});
-var infospotroom142 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom141.addEventListener('click', function(){
+
+showMedia(1, 'images/26.png');
+
+});
+
+var infospotroom142 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom142.position.set( 4720.97, -173.28, 1615.50 );
 					room14.add(infospotroom142);
-infospotroom142.addEventListener('click', function(){
-showMedia(1, 'images/27.png');
-});
-var infospotroom143 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom142.addEventListener('click', function(){
+
+showMedia(1, 'images/27.png');
+
+});
+
+var infospotroom143 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom143.position.set( 1859.19, -488.23, -4606.07 );
 					room14.add(infospotroom143);
-infospotroom143.addEventListener('click', function(){
-showMedia(1, 'images/28.png');
-});
-var infospotroom144 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom143.addEventListener('click', function(){
+
+showMedia(1, 'images/28.png');
+
+});
+
+var infospotroom144 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom144.position.set( 2113.72, 883.85, -4435.28 );
 					room14.add(infospotroom144);
-infospotroom144.addEventListener('click', function(){
-showMedia(1, 'images/29.png');
-});
-var infospotroom145 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom144.addEventListener('click', function(){
+
+showMedia(1, 'images/29.png');
+
+});
+
+var infospotroom145 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom145.position.set( -579.86, 489.16, 4936.37 );
 					room14.add(infospotroom145);
-infospotroom145.addEventListener('click', function(){
-showMedia(1, 'images/37.png');
-});
-var infospotroom146 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom145.addEventListener('click', function(){
+
+showMedia(1, 'images/37.png');
+
+});
+
+var infospotroom146 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom146.position.set( 1195.98, -246.91, 4838.80 );
 					room14.add(infospotroom146);
-infospotroom146.addEventListener('click', function(){
-ChangePanorama('room13');
-});
-var infospotroom147 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom146.addEventListener('click', function(){
+
+ChangePanorama('room13');
+
+});
+
+var infospotroom147 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom147.position.set( 4120.26, -166.46, 2811.18 );
 					room14.add(infospotroom147);
-infospotroom147.addEventListener('click', function(){
-ChangePanorama('room12');
-});
-var infospotroom148 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom147.addEventListener('click', function(){
+
+ChangePanorama('room12');
+
+});
+
+var infospotroom148 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom148.position.set( -2395.78, -1976.90, -3909.77 );
 					room14.add(infospotroom148);
-infospotroom148.addEventListener('click', function(){
-showMedia(1, 'images/70.jpg');
-});
-var infospotroom149 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom148.addEventListener('click', function(){
+
+showMedia(1, 'images/70.jpg');
+
+});
+
+var infospotroom149 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom149.position.set( -4387.16, -2319.75, 562.08 );
 					room14.add(infospotroom149);
-infospotroom149.addEventListener('click', function(){
-showMedia(1, 'images/69.jpg');
-});
-var infospotroom1410 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom149.addEventListener('click', function(){
+
+showMedia(1, 'images/69.jpg');
+
+});
+
+var infospotroom1410 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom1410.position.set( -3050.81, -1292.31, 3731.63 );
 					room14.add(infospotroom1410);
-infospotroom1410.addEventListener('click', function(){
-showMedia(1, 'images/68.jpg');
-});
-viewer.add( room14 );
-var room7v2 = new PANOLENS.ImagePanorama( "panoramas/room7v2.jpg" );
+
+infospotroom1410.addEventListener('click', function(){
+
+showMedia(1, 'images/68.jpg');
+
+});
+
+viewer.add( room14 );
+
+var room7v2 = new PANOLENS.ImagePanorama( "panoramas/room7v2.jpg" );
 			room7v2.addEventListener('progress', onProgress);
 			room7v2.addEventListener('load', function(e){
 				endLoading();
@@ -894,72 +1337,116 @@
 			room7v2.addEventListener('click', function(e){
 			});
 
-var infospotroom7v20 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+var infospotroom7v20 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom7v20.position.set( 3342.28, -667.10, 3651.40 );
 					room7v2.add(infospotroom7v20);
-infospotroom7v20.addEventListener('click', function(){
-showMedia(1, 'images/88.jpg');
-});
-var infospotroom7v21 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom7v20.addEventListener('click', function(){
+
+showMedia(1, 'images/88.jpg');
+
+});
+
+var infospotroom7v21 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom7v21.position.set( 4498.09, -2121.65, -476.22 );
 					room7v2.add(infospotroom7v21);
-infospotroom7v21.addEventListener('click', function(){
-showMedia(1, 'images/91.jpg');
-});
-var infospotroom7v22 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom7v21.addEventListener('click', function(){
+
+showMedia(1, 'images/91.jpg');
+
+});
+
+var infospotroom7v22 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom7v22.position.set( 3912.40, -3107.23, -0.08 );
 					room7v2.add(infospotroom7v22);
-infospotroom7v22.addEventListener('click', function(){
-showMedia(1, 'images/90.jpg');
-});
-var infospotroom7v23 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom7v22.addEventListener('click', function(){
+
+showMedia(1, 'images/90.jpg');
+
+});
+
+var infospotroom7v23 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom7v23.position.set( 2283.83, -963.72, 4330.80 );
 					room7v2.add(infospotroom7v23);
-infospotroom7v23.addEventListener('click', function(){
-showMedia(1, 'images/89.jpg');
-});
-var infospotroom7v24 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom7v23.addEventListener('click', function(){
+
+showMedia(1, 'images/89.jpg');
+
+});
+
+var infospotroom7v24 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom7v24.position.set( -1725.53, -4533.82, 1191.64 );
 					room7v2.add(infospotroom7v24);
-infospotroom7v24.addEventListener('click', function(){
-showMedia(1, 'images/84.jpg');
-});
-var infospotroom7v25 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom7v24.addEventListener('click', function(){
+
+showMedia(1, 'images/84.jpg');
+
+});
+
+var infospotroom7v25 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom7v25.position.set( 2217.93, -3680.16, 2546.05 );
 					room7v2.add(infospotroom7v25);
-infospotroom7v25.addEventListener('click', function(){
-showMedia(1, 'images/83.jpg');
-});
-var infospotroom7v26 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom7v25.addEventListener('click', function(){
+
+showMedia(1, 'images/83.jpg');
+
+});
+
+var infospotroom7v26 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom7v26.position.set( 379.88, 512.21, 4950.48 );
 					room7v2.add(infospotroom7v26);
-infospotroom7v26.addEventListener('click', function(){
-showMedia(1, 'images/85.jpg');
-});
-var infospotroom7v27 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom7v26.addEventListener('click', function(){
+
+showMedia(1, 'images/85.jpg');
+
+});
+
+var infospotroom7v27 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom7v27.position.set( 3741.67, 1762.77, 2797.85 );
 					room7v2.add(infospotroom7v27);
-infospotroom7v27.addEventListener('click', function(){
-showMedia(1, 'images/87.jpg');
-});
-var infospotroom7v28 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
+
+infospotroom7v27.addEventListener('click', function(){
+
+showMedia(1, 'images/87.jpg');
+
+});
+
+var infospotroom7v28 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 					infospotroom7v28.position.set( 4533.18, 2048.37, -458.03 );
 					room7v2.add(infospotroom7v28);
-infospotroom7v28.addEventListener('click', function(){
-showMedia(1, 'images/86.jpg');
-});
-var infospotroom7v29 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
+
+infospotroom7v28.addEventListener('click', function(){
+
+showMedia(1, 'images/86.jpg');
+
+});
+
+var infospotroom7v29 = new PANOLENS.Infospot( 512, hotspotIcons[9].data, true );
 					infospotroom7v29.position.set( -59.74, -4102.48, -2849.90 );
 					room7v2.add(infospotroom7v29);
-infospotroom7v29.addEventListener('click', function(){
-ChangePanorama('room6');
-});
-viewer.add( room7v2 );
-$(document).ready(function(){ ChangePanorama('room1'); });
 
-/*panoramas-end*/
+infospotroom7v29.addEventListener('click', function(){
+
+ChangePanorama('room6');
+
+});
+
+viewer.add( room7v2 );
+
+$(document).ready(function(){ ChangePanorama('room1'); });
+
+
+/*panoramas-end*/
             
-			var stilloading = true;
+			var initialY = 0;
+            var stilloading = true;
 			function onProgress ( event ) {
 				
 				progress = event.progress.loaded / event.progress.total * 100;
@@ -1017,7 +1504,29 @@
 						$("#tmp").fadeIn();
 						break;
 				}
-			}
+                initialY = window.scrollY;
+
+    
+                window.addEventListener('devicemotion', function (event) {
+                    if (event.accelerationIncludingGravity.x > 10) {
+                        closeMedia();
+                    }
+
+       
+                    if (event.accelerationIncludingGravity.y > 2) {
+                        var currentY = window.scrollY;
+                        var deltaY = currentY - initialY;
+                        document.getElementById("tmpcontent").style.transform = "translateY(" + deltaY + "px)";
+                    }
+                }, false);
+            }
+
+
+            function closeMedia() {
+                document.getElementById("tmp").style.display = "none";
+                document.getElementById("tmpcontent").style.transform = "translateY(0)"; // Restaurar la posición al cerrar
+            }
+            
 			
 			
 			
