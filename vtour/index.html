@@ -1505,19 +1505,19 @@ $(document).ready(function(){ ChangePanorama('room1'); });
 				}
                 window.addEventListener('devicemotion', function (event) {
                     var accelerationX = event.accelerationIncludingGravity.x;
-                    if (accelerationX > 5) {
+                    if (accelerationX > 10) {
                         // Mover hacia la derecha
                         closeMedia();
-                    } else if (accelerationX < -5) {
+                    } else if (accelerationX < -10) {
                         // Mover hacia la izquierda
                         closeMedia();
                     }
                 });
 
-            // Agregar event listener para el movimiento hacia abajo
+            
                 window.addEventListener('deviceorientation', function (event) {
                     var beta = event.beta;
-                    if (beta > 45) {
+                    if (beta > 60) {
                         // Mover hacia abajo
                         window.scrollTo(0, document.body.scrollHeight);
                     }
