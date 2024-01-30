@@ -1503,27 +1503,49 @@ $(document).ready(function(){ ChangePanorama('room1'); });
 						$("#tmp").fadeIn();
 						break;
 				}
-                window.addEventListener('devicemotion', function (event) {
+ // Variables para almacenar las posiciones iniciales de la cabeza
+                var initialGamma;
+                var initialBeta;
+
+  // Agregar event listener para el movimiento de realidad virtual
+                window.addEventListener('deviceorientation', function (event) {
                     var gamma = event.gamma; // Inclinación lateral (izquierda/derecha)
-                    var beta = event.beta; // Inclinación hacia abajo
+                    var beta = event.beta; // Inclinación hacia arriba/abajo
 
-                    if (gamma > 7) {
-                        closeMedia();
-                    } else if (gamma < -7) {
-                        closeMedia();
+    // Ajusta estos valores según lo que funcione mejor para tu caso
+                    if (gamma > 30 || gamma < -30) {
+      // Mover hacia la derecha o izquierda, cierra el contenido
+                        hideTemp();
                     }
-                     
-                    if (beta > 7) {
-                        $("#tmpcontent").scrollTop($("#tmpcontent").scrollTop() + 50); 
+
+    // Si no hay una posición inicial, la establece
+                    if (initialGamma === undefined) {
+                        initialGamma = gamma;
                     }
+
+    // Calcula la diferencia de inclinación desde la posición inicial
+                    var deltaGamma = gamma - initialGamma;
+
+    // Ajusta este valor según lo que funcione mejor para el scroll lateral
+                    var scrollAmount = deltaGamma * 2;
+
+    // Realiza el scroll lateral en #tmpcontent
+                    $("#tmpcontent").scrollLeft($("#tmpcontent").scrollLeft() + scrollAmount);
+
+    // Si no hay una posición inicial de beta, la establece
+                    if (initialBeta === undefined) {
+                        initialBeta = beta;
+                    }
+
+    // Calcula la diferencia de inclinación desde la posición inicial de beta
+                    var deltaBeta = beta - initialBeta;
+
+    // Ajusta este valor según lo que funcione mejor para el scroll vertical
+                    var scrollVerticalAmount = deltaBeta * 2;
+
+    // Realiza el scroll vertical en #tmpcontent
+                    $("#tmpcontent").scrollTop($("#tmpcontent").scrollTop() + scrollVerticalAmount);
                 });
-
-            
-            // Función para cerrar el contenido
-                function closeMedia() {
-                    $("#tmp").fadeOut();
-    
-            }
         }
             
 			
