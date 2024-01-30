@@ -1507,13 +1507,13 @@ $(document).ready(function(){ ChangePanorama('room1'); });
                     var gamma = event.gamma; // Inclinación lateral (izquierda/derecha)
                     var beta = event.beta; // Inclinación hacia abajo
 
-                    if (gamma > 30) {
+                    if (gamma > 7) {
                         closeMedia();
-                    } else if (gamma < -30) {
+                    } else if (gamma < -7) {
                         closeMedia();
                     }
                      
-                    if (beta > 30) {
+                    if (beta > 7) {
                         $("#tmpcontent").scrollTop($("#tmpcontent").scrollTop() + 50); 
                     }
                 });
