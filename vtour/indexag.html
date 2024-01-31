@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<!--projecttitle--><title>VirtualAlto</title><!--projecttitle-end-->
+		<!--projecttitle--><title>Virtual Alto (audiodescripciones)</title><!--projecttitle-end-->
 		<!--projectdescription--><meta name="description" content="Recorrido Virtual del Museo El Mogote"><!--projectdescription-end-->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
-		
+		<link href="/faviconpattern-02.png" rel="icon" sizes="268x268" type="image/png">
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		
@@ -171,15 +171,13 @@ var infospotroom30 = new PANOLENS.Infospot( 512, hotspotIcons[11].data, true );
 
 infospotroom30.addEventListener('click', function(){
     
-var textoTTS = 'Texto a ser leído en Text-to-Speech. Este es un texto más largo que será leído sin fragmentar. Puedes ajustar la función leerTextoConTTS según tus necesidades.';
+var textoTTS = 'Desde épocas muy antiguas la economía de esta región se basaba en el intercambio comercial de productos a lo largo de toda la costa y con zonas del interior. Se comercializaba hacia el norte con Colombia y hacia el sur con Perú. A partir del año 1600 el ganado vacuno ya era el principal sustento para la vida comercial de nuestra gente. Luego vino la paja toquilla y muchos productos más.';
 
   // Mostrar la imagen
 showMedia(1, 'images/1.png');
 
-  // Iniciar la lectura en TTS después de un pequeño retraso (ej. 500 milisegundos)
-setTimeout(function () {
-    leerTextoConTTS(textoTTS);
-}, 500);
+leerTextoConTTS(textoTTS);
+
 });
 
 var infospotroom31 = new PANOLENS.Infospot( 512, hotspotIcons[7].data, true );
@@ -1540,13 +1538,30 @@ $(document).ready(function(){ ChangePanorama('room1'); });
         }
             	// Función para leer texto en TTS y resolver la promesa cuando está completa
             function leerTextoConTTS(texto) {
-                responsiveVoice.speak(texto, 'Spanish Female', {
-                    onend: function() {
-      // Esta función se ejecuta cuando la lectura en TTS está completa
-      // Puedes realizar acciones adicionales aquí si es necesario
-                        console.log('Lectura en TTS completada');
+  // Divide el texto en fragmentos
+                var tamanoFragmento = 200;
+                var fragmentos = [];
+                for (var i = 0; i < texto.length; i += tamanoFragmento) {
+                    fragmentos.push(texto.substring(i, i + tamanoFragmento));
                 }
-            });
+
+  // Función para leer cada fragmento
+            function leerFragmento(indice) {
+                if (indice < fragmentos.length) {
+                    responsiveVoice.speak(fragmentos[indice], 'Spanish Female', {
+                        onend: function () {
+          // Llama recursivamente para el siguiente fragmento
+                            leerFragmento(indice + 1);
+                        }
+                    });
+            } else {
+      // Todos los fragmentos han sido leídos
+                console.log('Lectura en TTS completada');
+            }
+        }
+
+  // Inicia la lectura del primer fragmento
+            leerFragmento(0);
         }		
 			
 			//Update Callback
