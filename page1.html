@@ -30,6 +30,23 @@ $(document).ready(function()
    $("#FlipSwitch1").trigger('change');
 });
 </script>
+<style>
+    .layoutgrid5 {
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      text-align: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+    }
+    
+    #accessibilityText, #accessibilitySwitch {
+      display: none;
+    }
+
+ 
+</style>
 </head>
 <body>
 <ul id="SlideShow1" class="style2">
@@ -54,13 +71,14 @@ $(document).ready(function()
 </div>
 <div class="col-2">
 <div id="wb_ThemeableButton1">
-<a class="ui-button ui-corner-all" id="ThemeableButton1" href="/vtour/index.html">Iniciar</a>
+<a class="ui-button ui-corner-all" id="ThemeableButton1" href="/vtour/index.html">Iniciar
+    <picture class="button-image">
+        <img src="images/Imagen2.png" alt="" width="30" height="30">
+      </picture>
+    </a>
 </div>
 </div>
 <div class="col-3">
-<picture id="wb_Picture1">
-<img src="images/Imagen2.png" id="Picture1" alt="" width="42" height="42">
-</picture>
 </div>
 <div class="col-4">
 </div>
@@ -72,13 +90,14 @@ $(document).ready(function()
 </div>
 <div class="col-2">
 <div id="wb_ThemeableButton2">
-<a class="ui-button ui-corner-all" id="ThemeableButton2" href="/vtour/indexag.html">Iniciar (con audiodescripciones)</a>
+<a class="ui-button ui-corner-all" id="ThemeableButton2" href="/vtour/indexag.html">Iniciar (con audiodescripciones)
+    <picture class="button-image">
+        <img src="images/Imagen3.png" alt="" width="30" height="30">
+      </picture>
+    </a>
 </div>
 </div>
 <div class="col-3">
-<picture id="wb_Picture2">
-<img src="images/Imagen3.png" id="Picture2" alt="" width="44" height="44">
-</picture>
 </div>
 <div class="col-4">
 </div>
@@ -86,30 +105,35 @@ $(document).ready(function()
 </div>
 </div>
 </div>
+</div>
+<div id="layoutgrid5">
+<hr>
 </div>
 <div id="wb_LayoutGrid4">
 <div id="LayoutGrid4">
 <div class="col-1">
 </div>
-<div class="col-2">
-<div class="col-2-padding">
-<div id="wb_Text1">
-<p>Audio-descripciones</p>
+<hr>
+<div class="col-2" id="accessibilityText">
+  <div class="col-2-padding">
+    <div id="wb_Text1">
+      <p>Audio-descripciones</p>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-<div class="col-3">
-<div id="wb_FlipSwitch1">
-<input type="checkbox" role="switch" name="" id="FlipSwitch1" value="Audioguías">
-<label id="FlipSwitch1-label" for="FlipSwitch1">
-<span id="FlipSwitch1-inner"></span>
-<span id="FlipSwitch1-switch"></span>
-</label>
-</div>
+<div class="col-3" id="accessibilitySwitch">
+  <div id="wb_FlipSwitch1">
+    <input type="checkbox" role="switch" name="" id="FlipSwitch1" value="Audioguías">
+    <label id="FlipSwitch1-label" for="FlipSwitch1">
+      <span id="FlipSwitch1-inner"></span>
+      <span id="FlipSwitch1-switch"></span>
+    </label>
+  </div>
 </div>
 <div class="col-4">
 </div>
 </div>
 </div>
+
 </body>
 </html>
